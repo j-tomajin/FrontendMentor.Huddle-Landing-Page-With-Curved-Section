@@ -1,8 +1,102 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
+/* DISPLAY */
 
+/* HEADER */
 .header__display {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* SECTION ACTIVITY */
+.activity {
+    .activity-display {
+        display: grid;
+        place-items: center;
+        gap: f.rem(85);
+        grid-template-areas: 
+            'img'
+            'community'
+            'messages';
+
+        .img {
+            grid-area: img;
+        }
+
+        .grid-area-card-1 {
+            grid-area: community;
+        }
+
+        .grid-area-card-2 {
+            grid-area: messages;
+        }
+    }
+}
+
+/* SECTION COMMUNITY */
+.community {
+    &__display {
+        display: flex;
+        flex-direction: column;
+        gap: f.rem(220);
+
+        .community-card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: f.rem(74);
+        }
+    }
+}
+
+/* FOOTER */
+.footer {
+    &__display {
+        display: flex;
+        flex-direction: column;
+        gap: f.rem(105);
+
+        .footer-form {
+            form {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-content {
+            /* CONTACT */
+            .contact {
+                display: flex;
+                flex-direction: column;
+                gap: f.rem(26);
+
+                &__info {
+                    display: flex;
+                    align-items: center;
+                    gap: f.rem(16);
+                }
+            }
+
+            /* SOCIALS */
+            .socials {
+                display: flex;
+                gap: f.rem(16);
+                align-items: center;
+            }
+        }
+    }
+}
+
+
+
+
+
+/* REMOVE LATER */
+.header,
+.main,
+.activity,
+.community,
+.build-community 
+{
+    display: none;
 }
