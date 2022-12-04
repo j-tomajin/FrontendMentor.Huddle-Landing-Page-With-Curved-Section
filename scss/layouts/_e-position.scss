@@ -1,2 +1,23 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
+/* POSITION */
+
+/* FOOTER */
+.footer {
+    &__display {
+        .footer-form {
+            form {
+                .email {
+                    position: relative;
+
+                    .error {
+                        bottom: 3px;
+                        margin-left: f.rem(12);
+                        color: var(--l-red);
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+}
