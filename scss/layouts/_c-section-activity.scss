@@ -3,13 +3,55 @@
 
 .activity {
     width: 100%;
+    padding-bottom: f.rem(180);
 
-    &__container {
+    &-container {
         width: min(90%, f.rem(760));
         margin-inline: auto;
 
-        &__img {
-            background-color: red !important;
+        & > .img {
+            margin-bottom: calc(110px - f.rem(85));
+        } 
+
+        .activity-card {
+            width: min(50%, f.rem(190));
+
+            .img {
+                width: 40px;
+                margin-left: f.rem(5);
+            }
+
+            h2,
+            p {
+                text-align: center;
+            }
+
+            p {
+                color: var(--l-gray);
+            }
+        }
+
+        .activity-card:nth-child(2) {
+            margin-inline: auto;
+
+            h2 {
+                font-size: f.rem(71);
+            }
+        }
+
+        .activity-card:nth-child(3) {
+
+            .img {
+                width: 30px;
+            }
+
+            h2 {
+                font-size: f.rem(62);
+            }
+
+            p {
+                padding-inline: f.rem(40);
+            }
         }
     }
 }
