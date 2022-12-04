@@ -4,27 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
   
-  <title>Frontend Mentor | Huddle landing page with curved sections</title>
+  <title>Huddle</title>
+  <!-- FONT FAMILY -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./dist/style.css">
+
+  <!-- FONT AWESOME KIT -->
+  <script src="https://kit.fontawesome.com/6822ccfceb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  Try it free
-
-  Build The Community Your Fans Will Love
-
-  Huddle re-imagines the way we build communities. You have a voice, but so does 
-  your audience. Create connections with your users as you engage in genuine discussion. 
-
-  Get Started For Free
-
-  1.4k+
+  <!-- HEADER -->
+  <header class="header header__display">
+    <div class="header__logo">
+      <img src="./images/logo.svg" alt="huddle-logo">
+    </div>
+    <a href="#" class="header__link">Try it free</a>
+  </header>
+  
+  <!-- MAIN -->
+  <main class="main">
+    <div class="main__container">
+      <h1>Build The Community Your Fans Will Love</h1>
+      <p>
+        Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion. 
+      </p>
+      <a href="#" class="open-sans-bold">Get Started For Free</a>
+    </div>
+  </main>
+  
+  <!-- SECTION -->
+  <section class="activity activty__display activity__position">
+    <div class="activity__container">
+      <div class="activity__img">
+        <img src="./images/screen-mockups.svg" alt="">
+      </div>
+    </div>
+  </section>
+  <!-- 1.4k+
   Communities Formed
 
   2.7m+
@@ -55,12 +76,12 @@
   To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never 
   send you spam or pass on your email address
 
-  Subscribe
+  Subscribe -->
 
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Jeck</a>.
     </p>
   </footer>
 </body>
