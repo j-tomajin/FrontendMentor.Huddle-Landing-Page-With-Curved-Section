@@ -3,7 +3,96 @@
 
 footer {
     margin-top: auto;
-    margin-bottom: 5px;
+}
+
+.footer {
+    background-color: var(--x-d-cyan);
+    color: var(--white);
+
+    &__bg {
+        background-color: var(--white);
+        padding-top: f.rem(330);
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__container {
+        width: min(90%, f.rem(900));
+        margin-inline: auto;
+        padding-block: f.rem(64) f.rem(32);
+
+        .footer-form {
+
+            h5 {
+                color: var(--white);
+                font-size: f.rem(32);
+                margin-bottom: f.rem(20);
+            }
+
+            p {
+                font-size: f.rem(17);
+                margin-bottom: f.rem(32);
+            }
+
+            form {
+                width: 100%;
+
+                input,
+                button {
+                    border-radius: f.rem(8);
+                }
+                
+                input {
+                    padding: f.rem(12);
+                    width: 100%;
+                    margin-bottom: f.rem(32);
+                    outline: none;
+                    border: 1px solid var(--white);
+                }
+
+                .input-error {
+                    border-color: var(--l-red);
+                }
+
+                button {
+                    padding: f.rem(20) f.rem(36);
+                    margin-left: auto;
+                    background-color: var(--l-pink);
+                    color: var(--white);
+                    font-size: f.rem(18);
+                }
+            }
+        }
+
+
+        /* FOOTER CONTENT */
+        .footer-content {
+            .logo {
+                margin-bottom: f.rem(50);
+                svg {
+                    margin-bottom: f.rem(20);
+
+                    path {
+                        fill: var(--white);
+                    }
+                }
+            }
+
+            .contact {
+                margin-bottom: f.rem(44);
+            }
+
+            .socials  {
+                a {
+                    color: var(--white);
+                    font-size: f.rem(38);
+                }
+            }
+        }
+    }
 }
 
 .attribution {
