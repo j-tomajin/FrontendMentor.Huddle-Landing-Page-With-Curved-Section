@@ -1,2 +1,29 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
+
+.main {
+    width: 100%;
+
+    &__container {
+        width: min(90%, f.rem(745));
+        margin-inline: auto;
+        text-align: center;
+        padding-block: calc(f.rem(110) - 24px) f.rem(100);
+
+        h1 {
+            margin-bottom: f.rem(32);
+        }
+
+        p {
+            font-size: f.rem(17);
+            margin-bottom: f.rem(60);
+        }
+
+        a {
+            color: white;
+            background-color: var(--pink);
+            padding: f.rem(12) f.rem(34);
+            border-radius: 50px;
+        }
+    }
+}
