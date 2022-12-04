@@ -1,0 +1,15 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/functions' as f;
+
+.activity {
+    width: 100%;
+
+    &__container {
+        width: min(90%, f.rem(760));
+        margin-inline: auto;
+
+        &__img {
+            background-color: red !important;
+        }
+    }
+}
