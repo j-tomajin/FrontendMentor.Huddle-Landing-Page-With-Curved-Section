@@ -1,3 +1,17 @@
 :root {
-    /* Variables here */
+    /* 
+        l = light 
+        x = very
+        d = dark
+        p = pale
+    */
+
+    /* PRIMARY */
+    --pink: hsl(322, 100%, 66%);
+    --l-pink: hsl(321, 100%, 78%);
+    --l-red: hsl(0, 100%, 63%);
+
+    /* NEUTRAL */
+    --x-d-cyan: hsl(192, 100%, 9%);
+    --x-p-blue: hsl(207, 100%, 98%);
 }
