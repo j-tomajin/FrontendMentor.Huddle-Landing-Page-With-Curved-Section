@@ -1,0 +1,27 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/functions' as f;
+
+.community {
+    &__container {
+        width: min(90%, f.rem(870));
+        margin-inline: auto;
+        padding-bottom: f.rem(260);
+
+        .community-card {
+            width: min(100%, f.rem(365));
+            text-align: center;
+
+            &__content {
+
+                h3 {
+                    font-size: f.rem(28);
+                    margin-bottom: f.rem(18);
+                }
+
+                p {
+                    color: var(--l-gray);
+                }
+            }
+        }
+    }
+}
