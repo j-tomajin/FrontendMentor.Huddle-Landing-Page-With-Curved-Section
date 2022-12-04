@@ -1,5 +1,17 @@
 :root {
-  /* Variables here */
+  /* 
+      l = light 
+      x = very
+      d = dark
+      p = pale
+  */
+  /* PRIMARY */
+  --pink: hsl(322, 100%, 66%);
+  --l-pink: hsl(321, 100%, 78%);
+  --l-red: hsl(0, 100%, 63%);
+  /* NEUTRAL */
+  --x-d-cyan: hsl(192, 100%, 9%);
+  --x-p-blue: hsl(207, 100%, 98%);
 }
 
 html {
@@ -69,7 +81,94 @@ a, a:focus, a:visited {
   text-decoration: none;
 }
 
+h1, h2, h3,
+h4, h5, h6,
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+  color: var(--x-d-cyan);
+}
+
+a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+p, .open-sans-semi-bold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+}
+
+.open-sans-bold {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.header {
+  width: min(90%, 60rem);
+  margin-inline: auto;
+  padding-block: 1.5rem;
+}
+.header__logo {
+  width: 150px;
+}
+.header__link {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--l-pink);
+  border: 1px solid var(--l-pink);
+  border-radius: 50px;
+}
+
+.main {
+  width: 100%;
+}
+.main__container {
+  width: min(90%, 46.5625rem);
+  margin-inline: auto;
+  text-align: center;
+  padding-block: calc(6.875rem - 24px) 6.25rem;
+}
+.main__container h1 {
+  margin-bottom: 2rem;
+}
+.main__container p {
+  font-size: 1.0625rem;
+  margin-bottom: 3.75rem;
+}
+.main__container a {
+  color: white;
+  background-color: var(--pink);
+  padding: 0.75rem 2.125rem;
+  border-radius: 50px;
+}
+
+.activity {
+  width: 100%;
+}
+.activity__container {
+  width: min(90%, 47.5rem);
+  margin-inline: auto;
+}
+.activity__container__img {
+  background-color: red !important;
+}
+
+.header__display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 footer {
   margin-top: auto;
   margin-bottom: 5px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
 }/*# sourceMappingURL=style.css.map */
