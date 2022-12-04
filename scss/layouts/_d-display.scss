@@ -1,2 +1,8 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
+
+.header__display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
