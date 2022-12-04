@@ -1,3 +1,25 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 @use '../utils/fonts' as font;
+
+h1, h2, h3, 
+h4, h5, h6,
+.poppins-font {
+    font-family: font.$poppins;
+    color: var(--x-d-cyan);
+}
+
+a {
+    font-family: font.$open-sans;
+    font-weight: 400;
+}
+
+p, .open-sans-semi-bold {
+    font-family: font.$open-sans;
+    font-weight: 600;
+}
+
+.open-sans-bold {
+    font-family: font.$open-sans;
+    font-weight: 700;
+}
