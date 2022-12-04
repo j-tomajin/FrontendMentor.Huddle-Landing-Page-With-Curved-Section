@@ -1,0 +1,26 @@
+@use '../utils/breakpoints' as bp;
+@use '../utils/functions' as f;
+/* SECTION BUILD COMMUNITY */
+
+.build-community {
+    /* removelater */
+    margin-top: auto;
+
+    &__container {
+        width: min(90%, f.rem(500));
+        margin-inline: auto;
+        text-align: center;
+
+        h4 {
+            font-size: f.rem(36);
+            margin-bottom: f.rem(60);
+        }
+
+        a {
+            padding: f.rem(14) f.rem(36);
+            background-color: var(--pink);
+            border-radius: 50px;
+            color: var(--white);
+        }
+    }
+}
