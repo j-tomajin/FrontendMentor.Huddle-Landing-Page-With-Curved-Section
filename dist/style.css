@@ -121,6 +121,15 @@ p, .open-sans-semi-bold {
   border: 1px solid var(--l-pink);
   border-radius: 50px;
 }
+@media (min-width: 48.75em) {
+  .header__logo {
+    width: 12.5rem;
+  }
+  .header__link {
+    font-size: 1.125rem;
+    padding: 0.625rem 2rem;
+  }
+}
 
 .main {
   width: 100%;
@@ -130,6 +139,7 @@ p, .open-sans-semi-bold {
   margin-inline: auto;
   text-align: center;
   padding-block: calc(6.875rem - 24px) 6.25rem;
+  /* MEDIA QUERY - 1440px */
 }
 .main__container h1 {
   margin-bottom: 2rem;
@@ -144,6 +154,11 @@ p, .open-sans-semi-bold {
   padding: 0.75rem 2.125rem;
   border-radius: 50px;
 }
+@media (min-width: 90em) {
+  .main__container p {
+    padding-inline: 6.25rem;
+  }
+}
 
 .activity {
   width: 100%;
@@ -157,7 +172,7 @@ p, .open-sans-semi-bold {
   margin-bottom: calc(110px - 5.3125rem);
 }
 .activity-container .activity-card {
-  width: min(50%, 11.875rem);
+  width: 50%;
 }
 .activity-container .activity-card .img {
   width: 40px;
@@ -169,6 +184,14 @@ p, .open-sans-semi-bold {
 }
 .activity-container .activity-card p {
   color: var(--l-gray);
+}
+@media (min-width: 48.75em) {
+  .activity-container .activity-card {
+    width: 70%;
+  }
+  .activity-container .activity-card .img {
+    margin-left: 1.875rem;
+  }
 }
 .activity-container .activity-card:nth-child(2) {
   margin-inline: auto;
@@ -185,6 +208,14 @@ p, .open-sans-semi-bold {
 .activity-container .activity-card:nth-child(3) p {
   padding-inline: 2.5rem;
 }
+@media (min-width: 48.75em) {
+  .activity-container .activity-card:nth-child(3) .img {
+    width: 40px;
+  }
+  .activity-container .activity-card:nth-child(3) h2 {
+    font-size: 4.5rem;
+  }
+}
 
 .community__container {
   width: min(90%, 54.375rem);
@@ -192,8 +223,12 @@ p, .open-sans-semi-bold {
   padding-bottom: 16.25rem;
 }
 .community__container .community-card {
-  width: min(100%, 22.8125rem);
+  width: 100%;
   text-align: center;
+}
+.community__container .community-card__content {
+  width: min(100%, 23.75rem);
+  margin-block: auto;
 }
 .community__container .community-card__content h3 {
   font-size: 1.75rem;
@@ -202,14 +237,20 @@ p, .open-sans-semi-bold {
 .community__container .community-card__content p {
   color: var(--l-gray);
 }
+@media (min-width: 48.75em) {
+  .community__container .community-card {
+    text-align: left;
+  }
+}
 
 /* SECTION BUILD COMMUNITY */
 .build-community {
   /* removelater */
   margin-top: auto;
+  margin-bottom: 2rem;
 }
 .build-community__container {
-  width: min(90%, 31.25rem);
+  width: min(90%, 50rem);
   margin-inline: auto;
   text-align: center;
 }
@@ -238,6 +279,7 @@ p, .open-sans-semi-bold {
   place-items: center;
   gap: 5.3125rem;
   grid-template-areas: "img" "community" "messages";
+  /* MEDIA QUERY - 780px */
 }
 .activity .activity-display .img {
   grid-area: img;
@@ -248,10 +290,16 @@ p, .open-sans-semi-bold {
 .activity .activity-display .grid-area-card-2 {
   grid-area: messages;
 }
+@media (min-width: 48.75em) {
+  .activity .activity-display {
+    grid-template-areas: "img img" "community messages";
+  }
+}
 
 /* SECTION COMMUNITY */
 .community__display {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 13.75rem;
 }
@@ -259,6 +307,26 @@ p, .open-sans-semi-bold {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4.625rem;
+  /* MEDIA QUERY - 780px */
+}
+@media (min-width: 48.75em) {
+  .community__display .community-card {
+    /* gap: 0; */
+  }
+  .community__display .community-card:not(:first-child, :last-child) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .community__display .community-card:first-child, .community__display .community-card:last-child {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "content img";
+    /* GRID AREA */
+  }
+  .community__display .community-card:first-child .img, .community__display .community-card:last-child .img {
+    grid-area: img;
+  }
+  .community__display .community-card:first-child__content, .community__display .community-card:last-child__content {
+    grid-area: content;
+  }
 }
 
 /* FOOTER */
@@ -266,10 +334,12 @@ p, .open-sans-semi-bold {
   display: flex;
   flex-direction: column;
   gap: 6.5625rem;
+  /* MEDIA QUERY - 780px */
 }
 .footer__display .footer-form form {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 20%;
 }
 .footer__display .footer-content {
   /* CONTACT */
@@ -290,23 +360,37 @@ p, .open-sans-semi-bold {
   gap: 1rem;
   align-items: center;
 }
+@media (min-width: 48.75em) {
+  .footer__display {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 18.75rem;
+  }
+  .footer__display .footer-form form {
+    grid-template-columns: 65% 30%;
+    gap: 5%;
+  }
+  .footer__display .footer-content .socials {
+    gap: 2rem;
+  }
+}
 
 /* REMOVE LATER */
-.header,
+/* .header,
 .main,
 .activity,
 .community,
-.build-community {
-  display: none;
-}
-
+.build-community 
+{
+    display: none;
+} */
 /* POSITION */
 /* FOOTER */
 .footer__display .footer-form form .email {
   position: relative;
 }
 .footer__display .footer-form form .email .error {
-  bottom: 3px;
+  bottom: -23px;
   margin-left: 0.75rem;
   color: var(--l-red);
   position: absolute;
@@ -329,7 +413,7 @@ footer {
   width: 100%;
 }
 .footer__container {
-  width: min(90%, 56.25rem);
+  width: min(90%, 68.75rem);
   margin-inline: auto;
   padding-block: 4rem 2rem;
   /* FOOTER CONTENT */
@@ -353,7 +437,6 @@ footer {
 .footer__container .footer-form form input {
   padding: 0.75rem;
   width: 100%;
-  margin-bottom: 2rem;
   outline: none;
   border: 1px solid var(--white);
 }
@@ -367,6 +450,16 @@ footer {
   color: var(--white);
   font-size: 1.125rem;
 }
+@media (min-width: 48.75em) {
+  .footer__container .footer-form form input {
+    margin: 0;
+  }
+  .footer__container .footer-form form button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
 .footer__container .footer-content .logo {
   margin-bottom: 3.125rem;
 }
@@ -375,6 +468,9 @@ footer {
 }
 .footer__container .footer-content .logo svg path {
   fill: var(--white);
+}
+.footer__container .footer-content .logo p {
+  width: 21.875rem;
 }
 .footer__container .footer-content .contact {
   margin-bottom: 2.75rem;
