@@ -20,7 +20,7 @@ footer {
     }
 
     &__container {
-        width: min(90%, f.rem(900));
+        width: min(90%, f.rem(1100));
         margin-inline: auto;
         padding-block: f.rem(64) f.rem(32);
 
@@ -48,7 +48,6 @@ footer {
                 input {
                     padding: f.rem(12);
                     width: 100%;
-                    margin-bottom: f.rem(32);
                     outline: none;
                     border: 1px solid var(--white);
                 }
@@ -65,6 +64,20 @@ footer {
                     font-size: f.rem(18);
                 }
             }
+
+            @include bp.breakpointMin(medium-screen) {
+                form {
+                    input {
+                        margin: 0;
+                    }
+
+                    button {
+                        width: 100%;
+                        padding: f.rem(12);
+                        font-size: f.rem(16);
+                    }
+                }
+            }
         }
 
 
@@ -78,6 +91,10 @@ footer {
                     path {
                         fill: var(--white);
                     }
+                }
+
+                p {
+                    width: f.rem(350);
                 }
             }
 
