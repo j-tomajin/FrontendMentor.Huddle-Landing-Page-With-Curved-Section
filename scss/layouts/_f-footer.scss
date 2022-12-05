@@ -113,10 +113,11 @@ footer {
 }
 
 .attribution {
-    font-size: 11px; 
+    font-size: f.rem(15); 
     text-align: center; 
+    color: var(--l-gray);
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%); 
+    color: var(--x-p-blue);
 }
