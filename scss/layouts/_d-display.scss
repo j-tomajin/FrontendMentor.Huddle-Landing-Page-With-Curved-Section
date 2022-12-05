@@ -31,6 +31,13 @@
         .grid-area-card-2 {
             grid-area: messages;
         }
+
+        /* MEDIA QUERY - 780px */
+        @include bp.breakpointMin(medium-screen) {
+            grid-template-areas: 
+                'img img'
+                'community messages';
+        }
     }
 }
 
@@ -38,6 +45,7 @@
 .community {
     &__display {
         display: flex;
+        align-items: center;
         flex-direction: column;
         gap: f.rem(220);
 
@@ -45,6 +53,31 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: f.rem(74);
+
+            /* MEDIA QUERY - 780px */
+            @include bp.breakpointMin(medium-screen) {
+                /* gap: 0; */
+
+                &:not(:first-child, :last-child) {
+                    grid-template-columns: repeat(2, 1fr);  
+                }
+
+                &:first-child,
+                &:last-child {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-areas: 
+                        'content img';
+
+                    /* GRID AREA */
+                    .img {
+                        grid-area: img;
+                    }
+
+                    &__content {
+                        grid-area: content;
+                    }
+                }
+            }
         }
     }
 }
@@ -60,6 +93,7 @@
             form {
                 display: grid;
                 grid-template-columns: 1fr;
+                gap: 20%;
             }
         }
 
@@ -84,6 +118,27 @@
                 align-items: center;
             }
         }
+
+        
+        /* MEDIA QUERY - 780px */
+        @include bp.breakpointMin(medium-screen) {
+            flex-direction: row-reverse;   
+            justify-content: space-between;
+            gap: f.rem(300);
+
+            .footer-form {
+                form {
+                    grid-template-columns: 65% 30%;
+                    gap: 5%;
+                }
+            }
+
+            .footer-content {
+                .socials {
+                    gap: f.rem(32);
+                }
+            }
+        }
     }
 }
 
@@ -92,11 +147,11 @@
 
 
 /* REMOVE LATER */
-.header,
+/* .header,
 .main,
 .activity,
 .community,
 .build-community 
 {
     display: none;
-}
+} */
