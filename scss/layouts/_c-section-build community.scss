@@ -5,9 +5,10 @@
 .build-community {
     /* removelater */
     margin-top: auto;
+    margin-bottom: f.rem(32);
 
     &__container {
-        width: min(90%, f.rem(500));
+        width: min(90%, f.rem(800));
         margin-inline: auto;
         text-align: center;
 
