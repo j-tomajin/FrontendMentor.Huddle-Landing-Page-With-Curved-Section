@@ -17,4 +17,15 @@
         border: 1px solid var(--l-pink);
         border-radius: 50px;
     }
+
+    @include bp.breakpointMin(medium-screen) {
+        &__logo {
+            width: f.rem(200);
+        }
+
+        &__link {
+            font-size: f.rem(18);
+            padding: f.rem(10) f.rem(32);
+        }
+    }
 }
