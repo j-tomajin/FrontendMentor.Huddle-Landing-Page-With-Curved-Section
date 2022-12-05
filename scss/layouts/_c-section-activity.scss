@@ -14,7 +14,7 @@
         } 
 
         .activity-card {
-            width: min(50%, f.rem(190));
+            width: 50%;
 
             .img {
                 width: 40px;
@@ -28,6 +28,14 @@
 
             p {
                 color: var(--l-gray);
+            }
+
+            @include bp.breakpointMin(medium-screen) {
+                width: 70%;
+
+                .img {
+                    margin-left: f.rem(30);
+                }
             }
         }
 
@@ -51,6 +59,17 @@
 
             p {
                 padding-inline: f.rem(40);
+            }
+
+            @include bp.breakpointMin(medium-screen) {
+
+                .img {
+                    width: 40px;
+                }
+
+                h2 {
+                    font-size: f.rem(72);
+                }
             }
         }
     }
