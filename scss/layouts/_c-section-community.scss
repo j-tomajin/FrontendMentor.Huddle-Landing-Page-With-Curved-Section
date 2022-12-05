@@ -8,10 +8,12 @@
         padding-bottom: f.rem(260);
 
         .community-card {
-            width: min(100%, f.rem(365));
+            width: 100%;
             text-align: center;
 
             &__content {
+                width: min(100%, f.rem(380));
+                margin-block: auto;
 
                 h3 {
                     font-size: f.rem(28);
@@ -21,6 +23,10 @@
                 p {
                     color: var(--l-gray);
                 }
+            }
+
+            @include bp.breakpointMin(medium-screen) {
+                text-align: left;
             }
         }
     }
