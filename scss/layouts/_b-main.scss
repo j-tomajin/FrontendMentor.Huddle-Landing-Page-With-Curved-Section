@@ -25,5 +25,13 @@
             padding: f.rem(12) f.rem(34);
             border-radius: 50px;
         }
+
+        /* MEDIA QUERY - 1440px */
+        @include bp.breakpointMin(xlarge-screen) {
+
+            p {
+                padding-inline: f.rem(100);
+            }
+        }
     }
 }
